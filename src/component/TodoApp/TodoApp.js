@@ -18,7 +18,7 @@ export default class TodoApp extends Component {
   storeItems = (event) => {
     event.preventDefault();
     const { input } = this.state;
-    if (input.trim() === "") return; // Prevent empty items
+    if (input.trim() === "") return; 
 
     this.setState((prevState) => ({
       items: [...prevState.items, input],

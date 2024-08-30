@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    background-color: pink;
+    background-image: url('/public/background.jpeg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: sans-serif;
 }
 
@@ -9,34 +12,37 @@ body {
     margin: auto;
     margin-top: 30px;
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
 h1 {
     margin: 0;
     margin-bottom: 15px;
-    color: #691b9a6d; 
+    color: black; 
 }
 
 .input-section {
-    background-color: #ffffff80; 
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 18px;
     border-radius: 10px;
-    box-shadow: 0 7px 6px #0000003b;
+    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.2);
 }
 
 .input-section input {
     border-radius: 5px;
-    border: 1px solid #d1c4e9; 
+    border: 1px solid black; 
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #f3e5f5; 
+    background-color: white; 
     outline: none;
-    color: #6a1b9a47; 
+    color: black; 
 }
 
 input::placeholder {
-    color: #b39ddb; 
+    color: gray; 
 }
 
 ul {
@@ -49,12 +55,12 @@ ul li {
     justify-content: space-between;
     align-items: center; 
     list-style: none;
-    background-color: #ffffff80; 
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 10px;
-    color: #6a1b9a47; 
-    box-shadow: 0 4px 6px #0000001c;
+    color: black; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 ul li .actions {
@@ -67,5 +73,8 @@ ul li i {
 }
 
 .edit-input {
-    background-color: #f3e5f5;
+    background-color: white; 
+    color: black; 
+    border-radius: 5px;
+    border: 1px solid black; 
 }
