@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import "./TodoApp.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default class TodoApp extends Component {
   state = {
@@ -18,7 +20,10 @@ export default class TodoApp extends Component {
   storeItems = (event) => {
     event.preventDefault();
     const { input } = this.state;
-    if (input.trim() === "") return; 
+    if (input.trim() === "") {
+      toast.error("Invalid task"); // Display error toast
+      return;
+    }
 
     this.setState((prevState) => ({
       items: [...prevState.items, input],
@@ -77,6 +82,7 @@ export default class TodoApp extends Component {
             placeholder="Enter items..."
           />
         </form>
+        <ToastContainer /> {/* Toast container for displaying notifications */}
         <ul>
           {items.map((data, index) => (
             <li key={index}>
